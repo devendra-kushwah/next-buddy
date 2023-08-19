@@ -8,6 +8,8 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --white: #fff;
+  --black: #000;
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
@@ -38,6 +40,8 @@
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
+
+  --body-font-size: 16px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -86,13 +90,9 @@ body {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--black);
+  background: var(--white);
+  font-size: var(--body-font-size);
 }
 
 a {
