@@ -6,17 +6,19 @@ interface Props {
   src?: string;
   alt?: string;
   title?: string;
+  size?: number;
 }
 
 const ProfileAvatar: React.FC<Props> = (props) => {
-  const { sx = {}, src = "", alt = "", title = "" } = props;
+  
+  const { sx = {}, src = "", alt = "", title = "D", size } = props;
   const initials = title
     ?.split(" ")
     .map((word) => word.slice(0, 2))
     .join("");
 
   return (
-    <Avatar alt={alt} sx={sx} src={src}>
+    <Avatar alt={alt} sx={{...sx, height: size, width: size }} src={src}>
       {!src && initials}
     </Avatar>
   );

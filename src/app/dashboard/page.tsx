@@ -7,7 +7,7 @@ interface Props {
   sx?: {};
 }
 
-const Dashboard: React.FC<Props> = (props) => {
+const dashboard: React.FC<Props> = (props) => {
   return (
     <Layout>
       this is dashboard
@@ -15,4 +15,4 @@ const Dashboard: React.FC<Props> = (props) => {
   );
 };
 
-export default Dashboard;
+export default dashboard;
